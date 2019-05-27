@@ -48,16 +48,19 @@
 `ls | grep <filename>`
 
 
+
 ### create a file
 `touch <filename>`
   
 ### edit a file
-nano <filename>
+`nano <filename>`
   
 ### print somethingb into the screen
 `echo hello`
 
-`echo -e hi\nhow are you'
+```
+echo -e hi\nhow are you
+```
 
 ### create a file with contents
 `echo -e hi\nhow are you' > greeting.txt`
@@ -67,6 +70,17 @@ nano <filename>
 
 ### check the running services
 `ps -aux`
+
+### read from a file
+`cat <filename>`
+
+
+### Count how many lines in the file
+```
+cat file.txt | wc -l
+```
+
+
 
 </details>
 
@@ -133,3 +147,90 @@ sort -u dupfile.txt
 </details>
 
 
+
+# tshark
+tshark is the command line tool for wireshark to read pcap files
+
+<details>
+<summary> show/hide...
+</summary>
+  
+### To show the installed version of Tshark
+```
+tshark -v
+```
+### To Find all Tshark supported network interfaces for monitoring
+```
+tshark -D
+```
+### sniff traffic on eth0
+
+***Note: this needs permission***
+
+```
+tshark -i eth0
+```
+
+### Read a pcap file and display it into the console
+```
+tshark -r traffic.pcap
+```
+### To find the totoal number of packets in a certain pcap file?
+```
+tshark -r traffic.pcap | wc -l
+```
+### Read the first 10 packets? 
+```
+tshark -r traffic.pcap -c 10
+```
+### Print the list of protocols in HTTP_traffic.pcap  
+```
+tshark -r traffic.pcap -z io,phs -q
+```
+
+### command to show only the HTTP traffic from a PCAP file
+```
+tshark -Y 'http' -r traffic.pcap
+```
+
+### command to show the IP packets sent from IP address 192.168.1.1 to IP address 1.1.1.1
+
+```
+tshark -r traffic.pcap -Y "ip.src==192.168.1.1 && ip.dst==1.1.1.1"
+```
+
+### command to print packets containing GET requests
+
+```
+tshark -r traffic.pcap -Y "http.request.method==GET"
+```
+
+### command to used to print only source IP and URL for all GET request packets
+
+```
+tshark -r traffic.pcap -Y "http.request.method==GET" -Tfields -e frame.time -e ip.src -e http.request.full_uri
+```
+
+### To know How many HTTP packets contains the "password" string or any other string
+
+```
+tshark -r traffic.pcap -Y "http contains password”
+```
+### To know the destination IP address for GET requests sent for yahoo.com
+
+```
+tshark -r traffic.pcap -Y "http.request.method==GET && http.host==www.nytimes.com" -Tfields -e ip.dst
+```
+
+
+</details>
+
+
+# Referneces
+- http://www.unit-conversion.info/texttools/
+- wireshark
+- tshark
+- sort
+- virustotal
+- 
+  

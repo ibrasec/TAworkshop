@@ -229,7 +229,6 @@ tshark -r traffic.pcap -Y "http.request.method==GET && http.host==www.nytimes.co
 - http://www.unit-conversion.info/texttools/
 - wireshark
 - tshark
-- sort
 - virustotal
 - capanalysis
   

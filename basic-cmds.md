@@ -8,7 +8,8 @@
 `whoami`
 
 # change your directory
-`cd /home`
+
+```cd /home```
 
 `cd /Desktop`
 
@@ -39,4 +40,29 @@
 `traecroute 10.1.1.1`
 
 # find a certain file
-`ls | grep filename`
+`ls | grep <filename>`
+
+
+# create a file
+`touch <filename>`
+  
+# edit a file
+nano <filename>
+  
+# print something to the screen
+`echo hello`
+
+`echo -e hi\nhow are you'
+
+# create a file with contents
+`echo -e hi\nhow are you' > greeting.txt`
+
+# search for a word within a directory
+`egrep -r hi`
+
+# check the running services
+`ps -aux`
+
+#
+
+

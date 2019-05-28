@@ -193,6 +193,12 @@ tshark -r traffic.pcap -z io,phs -q
 tshark -Y 'http' -r traffic.pcap
 ```
 
+### command to export data transferred through HTTP
+```
+tshark -nr record-http.pcap --export http,tmpfolder
+```
+
+
 ### command to show the IP packets sent from IP address 192.168.1.1 to IP address 1.1.1.1
 
 ```

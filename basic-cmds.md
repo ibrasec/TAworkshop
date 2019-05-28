@@ -195,7 +195,7 @@ tshark -Y 'http' -r traffic.pcap
 
 ### command to export data transferred through HTTP
 ```
-tshark -nr record-http.pcap --export http,tmpfolder
+tshark -nr record-http.pcap --export-objects http,tsharkfile
 ```
 
 

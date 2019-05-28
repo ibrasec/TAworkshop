@@ -63,7 +63,7 @@ echo -e hi\nhow are you
 ```
 
 ### create a file with contents
-`echo -e hi\nhow are you' > greeting.txt`
+`echo -e 'hi\nhow are you' > greeting.txt`
 
 ### search for a word within a directory
 `egrep -r hi`

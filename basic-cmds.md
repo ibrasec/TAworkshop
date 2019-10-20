@@ -85,6 +85,19 @@ cat file.txt | wc -l
 </details>
 
 
+
+# Bash Scripting
+Commands to use when in need
+
+<details>
+<summary> show/hide...
+</summary>
+
+### loop command in one line
+`$ for i in {1..5};do echo $i; sleep 0.5; done`
+  
+</details>
+
 # sort commands
 sort command is used to sort files in descinding or assending order (Default Assending)
 

@@ -108,7 +108,7 @@ sudo airmon-ng start wlp2s0
 
 ### Start finding Nearby Access points
 
-sudo airdump-ng start mon0
+sudo airodump-ng start mon0
   
   
 ### Start finding Nearby Access points

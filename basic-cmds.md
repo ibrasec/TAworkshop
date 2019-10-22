@@ -92,7 +92,9 @@ Commands to use when in need
 <details>
 <summary> show/hide...
 </summary>
+``` for i in {1..5}; do echo $i;sleep 0.5;done```
 
+</details>
 
 # airmon
 

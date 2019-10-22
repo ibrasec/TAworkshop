@@ -93,8 +93,30 @@ Commands to use when in need
 <summary> show/hide...
 </summary>
 
-### loop command in one line
-`$ for i in {1..5};do echo $i; sleep 0.5; done`
+
+# airmon
+
+<details>
+<summary> show/hide...
+</summary>
+  
+### enable an interface to be in moitoring mode
+
+sudo airmon-ng start wlp2s0  
+
+### Start finding Nearby Access points
+
+sudo airdump-ng start mon0
+  
+  
+### Start finding Nearby Access points
+The below command will search the nearby AP names with thier MAC Address and the working channel id
+
+sudo airodump-ng -w ~/foundAp mon0
+
+### After finding out the access point name
+
+sudo airodump-ng --essid 'ACCESSPOINT-NAME' --bssid 'AA:BB:CC:DD:EE:FF' -w ~/CapturedAP mon0 -c <channel id>
   
 </details>
 

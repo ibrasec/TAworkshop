@@ -102,9 +102,11 @@ Commands to use when in need
 <summary> show/hide...
 </summary>
   
-### enable an interface to be in moitoring mode
-
+### enable the Wireless interface to be in moitoring mode
+issue the `ifconfig` command to find the wireless interface id, in my case it is `wlp2s0`
 sudo airmon-ng start wlp2s0  
+
+once you do this command you should find a newly created interface when you do the `ifconfig` command as example mon0,mon1...etc
 
 ### Start finding Nearby Access points
 
